@@ -1,69 +1,51 @@
 <template>
-	<div>
-		<router-view></router-view>
-		<div class="weui-tabbar">
-				<a v-for="a in arr" @click="toggleTabbar(a.id)" :href="a.href" class="weui-tabbar__item" :class="{'weui-bar__item_on':id==a.id}">
-				<span class="iconfont" :class="a.font" style="display: inline-block;position: relative;">
-                        
-                        <span v-show="a.bool" class="weui-badge" style="position: absolute;top: -2px;right: -13px;">{{a.num}}</span>
-					</span>
-					<p class="weui-tabbar__label">{{a.title}}</p>
+
+<div>
+	
+	<footer class="app-footer _line-fine" style="" _v-c8294afa="">
+		<div class="_effect" _v-c8294afa="">
+			<nav _v-26a78bfd="" _v-c8294afa="">
+				<a href = "#/index/xheader/chat">
+				<dl _v-26a78bfd="" class="v-link-active"> <dt class="iconfont icon-wechat" _v-26a78bfd=""> <i _v-26a78bfd="" class="_news-count">12</i> </dt>
+					<dd _v-26a78bfd="">微信</dd>
+				</dl>
 				</a>
+				<a href = "#/index/contact">
+				<dl _v-26a78bfd=""> <dt class="iconfont icon-contact" _v-26a78bfd="">  </dt>
+					<dd _v-26a78bfd="">通讯录</dd>
+				</dl>
+				</a>
+				<a href = "#/index/find">
+				<dl _v-26a78bfd=""> <dt class="iconfont icon-find" _v-26a78bfd=""> <i _v-26a78bfd="" class="_news-dot">99</i> </dt>
+					<dd _v-26a78bfd="">发现</dd>
+				</dl>
+				</a>
+				<a href = "#/index/me">
+				<dl _v-26a78bfd=""> <dt class="iconfont icon-me" _v-26a78bfd="">  </dt>
+					<dd _v-26a78bfd="">我</dd>
+				</dl>
+				</a>
+			</nav>
 		</div>
-		
-	</div>
+	</footer>
+		<router-view></router-view>
+</div>	
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				arr: [{
-					title: "微信",
-					bool: true,
-					href: "#/index/page1/tab1",
-					font: "icon-wechat",
-					num: 1,
-					id: 1
-				}, {
-					title: "通讯录",
-					bool: false,
-					href: "#/index/page2",
-					font: "icon-contact",
-					num: 1,
-					id: 2
-				}, {
-					title: "发现",
-					bool: false,
-					href: "#/index/page3",
-					font: "icon-find",
-					num: 1,
-					id: 3
-				}, {
-					title: "我",
-					bool: false,
-					href: "#/index/page4",
-					font: "icon-me",
-					num: 1,
-					id: 4
-				}],
-				id: 1
-			}
-		},
-		components: {
-			//		page1
-		},
-		methods: {
-			toggleTabbar: function(id) {
-				this.id = id
-			}
-		}
-	}
+
 </script>
+
 <style scoped>
-	/*.mu-paper{
-		position: absolute;
-	    bottom: 0;
-	    width: 100%;
-	}*/
+.app-footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+.app-footer a{
+	display: inline-block;
+	margin: 0 25px;
+}
 </style>
