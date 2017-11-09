@@ -4,7 +4,6 @@ import VueRouter from "vue-router"
 import $ from "jquery"
 import "weui"
 //window.$ = $
-import "./resource/css/base.css"
 
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
@@ -14,26 +13,45 @@ Vue.use(Vuex)
 Vue.use(VueRouter)
 //引入组件
 import xheader from "./components/xheader.vue"
-import weui from "./components/weui.vue"
-import muse from "./components/muse.vue"
-import tab1 from "./components/muse/tab1.vue"
+import xfooter from "./components/xfooter.vue"
+import page1 from "./components/page/page1.vue"
+import page2 from "./components/page/page2.vue"
+import page3 from "./components/page/page3.vue"
+import page4 from "./components/page/page4.vue"
+import tab1 from "./components/page/tab/tab1.vue"
+import tab2 from "./components/page/tab/tab2.vue"
+import tab3 from "./components/page/tab/tab3.vue"
+
 let router = new VueRouter({
 	routes: [{
 		path: "/index",
-		component: xheader
-	}, {
-		path: "/weui",
-		component: weui
-	}, {
-		path: "/muse",
-		component: muse,
+		component:xfooter,
 		children: [{
-			path: "tab1",
-			component: tab1
-		}]
-	}, {
+			path: "/index/page1",
+			component:page1,
+			children: [{
+					path: "tab1",
+					component: tab1
+				},{
+					path: "tab2",
+					component: tab2
+				},{
+					path: "tab3",
+					component: tab3
+				}]
+			},{
+				path: "/index/page2",
+				component:page2
+			},{
+				path: "/index/page3",
+				component:page3
+			},{
+				path: "/index/page4",
+				component:page4
+			}]
+		},{
 		path: '/',
-		redirect: '/index'
+		redirect: '/index/page1/tab1'
 	}]
 })
 let store = new Vuex.Store({
@@ -47,17 +65,13 @@ new Vue({
 	store,
 	router,
 	data: {
-		name: "qd",
-		//txt
-		/*txt: require("./resource/txt/data.txt"),
-		html: require("./resource/html/index.html"),
-		img: require("./resource/images/1.jpg"),*/
 
 	},
 	template: `
-		<router-view></router-view>
+			<router-view></router-view>
 	`,
-	components: {
+	/*components: {
+		xfooter,
 		xheader
-	}
+	}*/
 })
