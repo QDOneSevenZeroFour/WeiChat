@@ -13,12 +13,12 @@
 						<div class="_align-right"> <span class="iconfont"></span> </div>
 					</div>
 					<div class="top-title _effect">
-						<p> <span>二维码/条码</span> </p>
+						<p> <span v-text="menu[id].title"></span> </p>
 					</div>
 				</div>
 				<div class="_cover-content _effect">
 					<div class="sao-yi-sao-panel saoyisao">
-						<div :class="menu[current].type">
+						<div :class="menu[id].type">
 							<div class="frame">
 								<span class="green-line"></span>
 								<span class="left-top"></span>
@@ -26,7 +26,7 @@
 								<span class="left-bottom"></span>
 								<span class="right-bottom"></span> </div>
 							<div class="desc">
-								<p v-text="menu[current].text"></p>
+								<p v-text="menu[id].text"></p>
 							</div>
 						</div>
 					</div>
@@ -60,31 +60,31 @@
 			return {
 				bool: false,
 				current: 0,
-				id: 1,
+				id: 0,
 				menu: [{
 					type: 'scan-qr-code',
 					name: '扫码',
 					title: '二维码/条码',
 					text: '将二维码/条码放入框内,即可自动扫描',
-					id: 1
+					id: 0
 				}, {
 					type: 'scan-book',
 					name: '封面',
 					title: '封面/电影海报',
 					text: '讲书、CD、电影海报放入框内,即可自动扫描',
-					id: 2
+					id: 1
 				}, {
 					type: 'scan-street',
 					name: '街景',
 					title: '街景',
 					text: '扫一下周边环境,即可自动扫描',
-					id: 3
+					id: 2
 				}, {
 					type: 'scan-word',
 					name: '翻译',
 					title: '翻译',
 					text: '将英文单词放入框内',
-					id: 4
+					id: 3
 				}]
 			}
 		},

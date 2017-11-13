@@ -3,7 +3,10 @@
 	<header class="app-header" style="" _v-c8294afa="">
 		<div class="_effect" _v-c8294afa="">
 			<div class="_cover-top" _v-60c89da3="" _v-c8294afa="" style="overflow:visible">
-				<div class="other" _v-60c89da3=""> <span class="iconfont icon-tips-jia" _v-60c89da3="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); display: none;"></span> <span class="iconfont icon-tips-add-friend" _v-60c89da3="" style=""></span>
+				<div class="other" _v-60c89da3=""> 
+					<span class="iconfont icon-tips-jia" _v-60c89da3="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); display: none;"></span> 
+					<a href="#/addfriends" style="color:#fff">
+					<span class="iconfont icon-tips-add-friend" _v-60c89da3="" style=""></span></a>
 					<ul class="tips-menu tips-close" _v-60c89da3="">
 						<li _v-60c89da3=""> <span class="iconfont icon-tips-xiaoxi" _v-60c89da3=""></span>
 							<div _v-60c89da3="">发起群聊</div>
@@ -35,25 +38,25 @@
 				<a href="javascript:" class="weui_search_cancel">取消</a>
 			</div>
 			<div class="weui_cells_contact-head weui_cells weui_cells_access" style="margin-top:-1px" _v-32554b3e="">
-				<a class="weui_cell" href="#!/contact/new-friends" _v-32554b3e="">
+				<a class="weui_cell" href="#/newfriends" _v-32554b3e="">
 					<div class="weui_cell_hd" _v-32554b3e=""> <img class="img-obj-cover" src="../resource/images/contact_top-friend-notify.f6191d2.png" _v-32554b3e=""> </div>
 					<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
 						<p _v-32554b3e="">新的朋友</p>
 					</div>
 				</a>
-				<a class="weui_cell" href="#!/contact/group-chat" _v-32554b3e="">
+				<a class="weui_cell" href="#/groupChat" _v-32554b3e="">
 					<div class="weui_cell_hd" _v-32554b3e=""> <img class="img-obj-cover" src="../resource/images/contact_top-addgroup.5d99a15.png" _v-32554b3e=""> </div>
 					<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
 						<p _v-32554b3e="">群聊</p>
 					</div>
 				</a>
-				<a class="weui_cell" href="#!/contact/new-friends" _v-32554b3e="">
+				<a class="weui_cell" href="#/newfriends" _v-32554b3e="">
 					<div class="weui_cell_hd" _v-32554b3e=""> <img class="img-obj-cover" src="../resource/images/contact_top-tag.7218970.png" _v-32554b3e=""> </div>
 					<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
 						<p _v-32554b3e="">标签</p>
 					</div>
 				</a>
-				<a class="weui_cell" href="#!/contact/new-friends" _v-32554b3e="">
+				<a class="weui_cell" href="#/newfriends" _v-32554b3e="">
 					<div class="weui_cell_hd" _v-32554b3e=""><img class="img-obj-cover" src="../resource/images/contact_top-offical.cc0e620.png" _v-32554b3e=""></div>
 					<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
 						<p _v-32554b3e="">公众号</p>
