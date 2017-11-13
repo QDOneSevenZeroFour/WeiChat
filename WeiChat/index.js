@@ -21,12 +21,18 @@ import me from "./components/me.vue"
 import newfriends from "./components/contact/new-friends.vue"
 import groupChat from "./components/contact/group-chat.vue"
 import addfriends from "./components/contact/add-friends.vue"
+import personInfo from "./components/contact/person-info.vue"
+import personInfoSet from "./components/contact/person-info-set.vue"
 
 //引入find中的组件
 import friends from "./components/find/friends.vue"
 import saoyisao from "./components/find/sao-yi-sao.vue"
 import yaoyiyao from "./components/find/yao-yi-yao.vue"
 import driftBottle from "./components/find/drift-bottle.vue"
+
+VueRouter.prototype.goBack = function(){
+	this.go(-1);
+}
 
 let router = new VueRouter({
 	routes: [{
@@ -41,23 +47,29 @@ let router = new VueRouter({
 		}, {
 			path: "find",
 			component: find
-		},{
-			path:"me",
-			component:me
+		}, {
+			path: "me",
+			component: me
 		}]
-	},{
+	}, {
 		path: "/newfriends",
 		component: newfriends
-	},{
+	}, {
 		path: "/groupChat",
 		component: groupChat
-	},{
+	}, {
 		path: "/addfriends",
 		component: addfriends
-	},{
+	}, {
+		path: "/contact/:num",
+		component: personInfo
+	}, {
+		path: "/contact/personInfo/personInfoSet",
+		component: personInfoSet
+	}, {
 		path: "/friends",
 		component: friends
-	},{
+	}, {
 		path: "/saoyisao",
 		component: saoyisao
 	}, {
@@ -74,9 +86,12 @@ let router = new VueRouter({
 
 let store = new Vuex.Store({
 	state: {
-		bool:false
+		name: "可爱的毛驴",
+		id: "weid_yantao",
+		remark: "杨涛",
+		phone: "1738238393",
+		img: "//ad-gold-cdn.xitu.io/14999138688354f1720f589d2d33db77f026bb07c8f67.jpg"
 	}
-	
 })
 
 new Vue({
@@ -84,7 +99,7 @@ new Vue({
 	store,
 	router,
 	data: {
-		
+
 	},
 	template: `
 		<router-view></router-view>

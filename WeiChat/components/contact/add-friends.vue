@@ -3,11 +3,11 @@
 		<div class="_full_router component-add-friends cover-transition" _v-018bc8bb="" _v-32554b3e="">
 			<div class="_full_inner" _v-018bc8bb="">
 				<div class="_cover-top" _v-f50d4fca="" _v-018bc8bb="">
-					<a href="#/index/contact" style="color:#fff">
-					<div class="top-back" _v-f50d4fca="">
+				<!--	<a href="#/index/contact" style="color:#fff">-->
+					<div class="top-back" _v-f50d4fca="" @click="goBack">
 						<div class="_ellipsis iconfont icon-return-arrow v-link-active" _v-f50d4fca="">通讯录</div>
 					</div>
-					</a>
+					<!--</a>-->
 					<div class="top-other" _v-f50d4fca="">
 						<div class="_align-right" _v-f50d4fca=""> <span class="iconfont" _v-f50d4fca=""></span> </div>
 					</div>
@@ -67,6 +67,13 @@
 </template>
 
 <script>
+	export default{
+		methods:{
+			goBack(){
+				this.$router.goBack()
+			}
+		}
+	}
 </script>
 
 <style scoped>

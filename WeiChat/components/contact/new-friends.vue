@@ -8,9 +8,10 @@
 						<div class="_ellipsis iconfont icon-return-arrow v-link-active" _v-f50d4fca="">通讯录</div>
 						</a>
 					</div>
+					<a href="#/addfriends" style="color: #fff;">
 					<div class="top-other" _v-f50d4fca="">
 						<div slot="right" class="_align-right" _v-2747733a=""> <span _v-2747733a="">添加朋友</span> </div>
-					</div>
+					</div></a>
 					<div class="top-title _effect" _v-f50d4fca="">
 						<p _v-f50d4fca=""> <span _v-f50d4fca="">新的朋友</span> </p>
 					</div>

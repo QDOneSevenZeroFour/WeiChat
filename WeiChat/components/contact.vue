@@ -63,50 +63,75 @@
 					</div>
 				</a>
 			</div>
-			<div class="contact-friends" _v-32554b3e="">
-				<p class="contact-alpha" _v-32554b3e="">A</p>
-				<div class="weui_cells weui_cells_access" _v-32554b3e="">
-					<div class="weui_cell" _v-32554b3e="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-						<div class="weui_cell_hd" _v-32554b3e=""> <img _v-32554b3e="" src="//ad-gold-cdn.xitu.io/14999138688354f1720f589d2d33db77f026bb07c8f67.jpg"></div>
+			<div class="contact-friends" v-for="i in arr">
+				<p class="contact-alpha" _v-32554b3e="">{{i.team}}</p>
+					<a :href="'#/contact/' + i.id" @click="send(i.id,i.name,i.remark,i.phone,i.img)" class="col"><div class="weui_cell" _v-32554b3e="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<div class="weui_cell_hd" _v-32554b3e=""> <img _v-32554b3e="" :src="i.img"></div>
 						<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
-							<p _v-32554b3e="">阿涛</p>
+							<p _v-32554b3e="">{{i.remark}}</p>
 						</div>
 					</div>
+				</a>
 				</div>
-				<p class="contact-alpha" _v-32554b3e="">B</p>
-				<div class="weui_cells weui_cells_access" _v-32554b3e="">
-					<div class="weui_cell" _v-32554b3e="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-						<div class="weui_cell_hd" _v-32554b3e=""> <img _v-32554b3e="" src="//ad-gold-cdn.xitu.io/1499914019068553d2c25d0b33b83481795c552e0b47f.jpg"></div>
-						<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
-							<p _v-32554b3e="">白加黑</p>
-						</div>
-					</div>
-				</div>
-				<p class="contact-alpha" _v-32554b3e="">X</p>
-				<div class="weui_cells weui_cells_access" _v-32554b3e="">
-					<div class="weui_cell" _v-32554b3e="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-						<div class="weui_cell_hd" _v-32554b3e=""> <img _v-32554b3e="" src="//ad-gold-cdn.xitu.io/1499913563353063825fa09e5e83359a90c91417e029e.jpg"></div>
-						<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
-							<p _v-32554b3e="">小明</p>
-						</div>
-					</div>
-					<div class="weui_cell" _v-32554b3e="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-						<div class="weui_cell_hd" _v-32554b3e=""> <img _v-32554b3e="" src="//ad-gold-cdn.xitu.io/14999140634069b6825290779221783b3b59fbba0addd.jpg"></div>
-						<div class="weui_cell_bd weui_cell_primary" _v-32554b3e="">
-							<p _v-32554b3e="">小亮</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 </div>
 </template>
 
 <script>
+		
+	export default {
+	
+		data(){
+			return{
+				arr: [{
+									name:"安可爱的毛驴",
+									id:"weid_yantao",
+									remark:"安安",
+									phone:"1738238395",
+									img:"//ad-gold-cdn.xitu.io/14999138688354f1720f589d2d33db77f026bb07c8f67.jpg",
+									team:"A"
+								}, {
+									name:"不可爱的苹果",
+									id:"weid_kkk",
+									remark:"北北",
+									phone:"1738238398",
+									img:"//ad-gold-cdn.xitu.io/1499914019068553d2c25d0b33b83481795c552e0b47f.jpg",
+									team:"B"
+								}, {
+									name:"超可爱的草莓",
+									id:"weid_111tao",
+									remark:"超超",
+									phone:"1738238390",
+									img:"//ad-gold-cdn.xitu.io/1499913563353063825fa09e5e83359a90c91417e029e.jpg",
+									team:"C"
+								},{
+									name:"大可爱的羊驼",
+									id:"weid_2222tao",
+									remark:"大海",
+									phone:"1738238391",
+									img:"//ad-gold-cdn.xitu.io/14999138688354f1720f589d2d33db77f026bb07c8f67.jpg",
+									team:"D"
+								}],
+			}
+		},
+		methods:{
+			send(id,name,remark,phone,img){
+				this.$store.state.id = id
+				this.$store.state.name = name
+				this.$store.state.remark = remark
+				this.$store.state.phone = phone
+				this.$store.state.img = img
+			}
+		}
+		
+	}
 </script>
 
 <style scoped>
+	.col{
+		color: #000000;
+	}
 	.app-content {
 		padding-top: 45px;
 		padding-bottom: 50px;
@@ -114,7 +139,9 @@
 		position: relative;
 		height: 100%;
 	}
-	
+	.weui_cell{
+		background: #fff;
+	}
 	.app-content ._full_inner {
 		z-index: 2;
 	}
