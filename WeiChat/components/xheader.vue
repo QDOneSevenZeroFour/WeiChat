@@ -1,26 +1,26 @@
 <template>
 <div>
-	<header class="app-header" style="" >
-		<div class="_effect" >
-			<div class="_cover-top"   style="overflow:visible">
-				<div class="other" > <span class="iconfont icon-tips-jia"  style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></span> <span class="iconfont icon-tips-add-friend"  style="display: none;"></span>
-					<ul class="tips-menu tips-close" >
-						<li > <span class="iconfont icon-tips-xiaoxi" ></span>
-							<div >发起群聊</div>
+	<header class="app-header" style="" _v-c8294afa="">
+		<div class="_effect" _v-c8294afa="">
+			<div class="_cover-top" _v-60c89da3="" _v-c8294afa="" style="overflow:visible">
+				<div class="other" _v-60c89da3=""> <span class="iconfont icon-tips-jia" _v-60c89da3="" style="touch-action: manipulation; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></span> <span class="iconfont icon-tips-add-friend" _v-60c89da3="" style="display: none;"></span>
+					<ul class="tips-menu tips-close" _v-60c89da3="">
+						<li _v-60c89da3=""> <span class="iconfont icon-tips-xiaoxi" _v-60c89da3=""></span>
+							<div _v-60c89da3="">发起群聊</div>
 						</li>
-						<li > <span class="iconfont icon-tips-add-friend" ></span>
-							<div >添加朋友</div>
+						<li _v-60c89da3=""> <span class="iconfont icon-tips-add-friend" _v-60c89da3=""></span>
+							<div _v-60c89da3="">添加朋友</div>
 						</li>
-						<li > <span class="iconfont icon-tips-saoyisao" ></span>
-							<div >扫一扫</div>
+						<li _v-60c89da3=""> <span class="iconfont icon-tips-saoyisao" _v-60c89da3=""></span>
+							<div _v-60c89da3="">扫一扫</div>
 						</li>
-						<li > <span class="iconfont icon-tips-fukuan" ></span>
-							<div >收付款</div>
+						<li _v-60c89da3=""> <span class="iconfont icon-tips-fukuan" _v-60c89da3=""></span>
+							<div _v-60c89da3="">收付款</div>
 						</li>
 					</ul>
-					<div class="tips-masker"  style="display: none;"></div>
+					<div class="tips-masker" _v-60c89da3="" style="display: none;"></div>
 				</div>
-				<div class="center" > 微信 <span class="parentheses"  style="">12</span> </div>
+				<div class="center" _v-60c89da3=""> 微信 <span class="parentheses" _v-60c89da3="" style="">12</span> </div>
 			</div>
 		</div>
 	</header>
