@@ -11,7 +11,6 @@ Vue.use(VueRouter)
 //引入组件
 
 import xfooter from "./components/xfooter.vue"
-import xheader from "./components/xheader.vue"
 import chat from "./components/chat.vue"
 import contact from "./components/contact.vue"
 import find from "./components/find.vue"
