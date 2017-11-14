@@ -16,6 +16,8 @@ import contact from "./components/contact.vue"
 import find from "./components/find.vue"
 import me from "./components/me.vue"
 
+import chatWith from "./components/chat/chatWith.vue"
+import chatperson from "./components/chat/chatperson.vue"
 //引入contact中的组件
 import newfriends from "./components/contact/new-friends.vue"
 import groupChat from "./components/contact/group-chat.vue"
@@ -29,7 +31,8 @@ import saoyisao from "./components/find/sao-yi-sao.vue"
 import yaoyiyao from "./components/find/yao-yi-yao.vue"
 import driftBottle from "./components/find/drift-bottle.vue"
 
-VueRouter.prototype.goBack = function(){
+VueRouter.prototype.goBack = function() {
+	this.isBack = true
 	this.go(-1);
 }
 
@@ -39,7 +42,11 @@ let router = new VueRouter({
 		component: xfooter,
 		children: [{
 			path: "chat",
-			component: chat
+			component: chat,
+			children: [{
+				path: "chatWith",
+				component: chatWith
+			}]
 		}, {
 			path: "contact",
 			component: contact
@@ -78,6 +85,9 @@ let router = new VueRouter({
 		path: "/driftBottle",
 		component: driftBottle
 	}, {
+		path: "/chatperson",
+		component: chatperson
+	}, {
 		path: '/',
 		redirect: '/index/chat'
 	}]
@@ -85,6 +95,7 @@ let router = new VueRouter({
 
 let store = new Vuex.Store({
 	state: {
+		chatname: "Tom",
 		name: "可爱的毛驴",
 		id: "weid_yantao",
 		remark: "杨涛",

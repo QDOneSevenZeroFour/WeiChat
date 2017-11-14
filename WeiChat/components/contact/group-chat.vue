@@ -5,7 +5,7 @@
 				<div class="_cover-top" _v-f50d4fca="" _v-420c9804="">
 					<a href="#/index/contact" style="color:#fff">
 					<div class="top-back" _v-f50d4fca="">
-						<div class="_ellipsis iconfont icon-return-arrow v-link-active" _v-f50d4fca="">返回</div>
+						<div class="_ellipsis iconfont icon-return-arrow v-link-active" _v-f50d4fca="" @click="goback">返回</div>
 					</div>
 					</a>
 					<div class="top-other" _v-f50d4fca="">
@@ -82,7 +82,12 @@
 					num:10
 				}]
 			}
-		}
+		},
+		methods: {
+			goback() {
+				this.$router.goBack()
+			}
+		},
 	}
 </script>
 

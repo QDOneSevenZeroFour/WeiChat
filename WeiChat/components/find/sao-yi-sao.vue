@@ -5,7 +5,7 @@
 				<div class="_cover-top">
 					<a href="#/index/find" style="color:#fff">
 						<div class="top-back">
-							<div class="_ellipsis iconfont icon-return-arrow v-link-active">返回</div>
+							<div class="_ellipsis iconfont icon-return-arrow v-link-active" @click="goback">返回</div>
 
 						</div>
 					</a>
@@ -91,6 +91,9 @@
 		methods: {
 			chooseItem(id) {
 				this.id = id;
+			},
+			goback() {
+				this.$router.goBack()
 			}
 
 		}
